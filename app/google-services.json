@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "446436786209",
+    "project_id": "verduritassa-danilomoreno",
+    "storage_bucket": "verduritassa-danilomoreno.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446436786209:android:27f213f091919aac652360",
+        "android_client_info": {
+          "package_name": "danilo.moreno.verduritassa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuFgcbqjGpAm7ksgKa2pLiyRafpNxx8Ak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
