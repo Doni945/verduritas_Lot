@@ -7,13 +7,13 @@
     android:background="#F8FDF2"
     android:padding="16dp">
 
-    <!-- Header Section -->
+    <!-- Encabezado -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9CEC32"
-        android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#9CEC32"
         android:padding="16dp">
 
         <TextView
@@ -21,71 +21,82 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Verduritas SA"
-            android:textColor="#424242"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#424242" />
 
-        <!-- Refresh Button -->
+        <!-- Botón de retroceso -->
         <ImageView
-            android:id="@+id/refreshButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:contentDescription="Actualizar"
-            android:src="@drawable/logout" />
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logout"
+            android:contentDescription="Botón Atrás"
+            android:tint="@android:color/black"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
     </LinearLayout>
 
-    <!-- Welcome Message -->
+    <!-- Mensaje de bienvenida -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Bienvenido Usuario"
-        android:textColor="#424242"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="#424242" />
 
-    <!-- Crop Table -->
-    <TableLayout
-        android:id="@+id/tableLayout"
+    <!-- Tabla de cultivos dentro de un ScrollView -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#C6E377">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginTop="16dp">
 
-        <TableRow
+        <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:background="#9CEC32">
+            android:stretchColumns="1"
+            android:background="#C6E377">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="21dp"
-                android:layout_weight="1"
-                android:text="Tus Cosechas"
-                android:textColor="#424242"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!-- Encabezado de la tabla -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9CEC32"
+                android:padding="8dp">
 
-            <!-- ID agregado -->
-            <ImageView
-                android:id="@+id/addCosechaButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/plus"
-            android:contentDescription="Añadir Cosecha"
-            android:clickable="true"
-            android:focusable="true" />
-        </TableRow>
-    </TableLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tus Cosechas"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#424242" />
 
-    <!-- Bottom Buttons -->
+                <!-- Botón para agregar cultivos -->
+                <ImageView
+                    android:id="@+id/addCosechaButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/plus"
+                    android:contentDescription="Añadir Cosecha" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Botones inferiores -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:gravity="center"
-        style="?android:attr/buttonBarStyle">
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/btnEditar"
@@ -95,8 +106,7 @@
             android:backgroundTint="#9CEC32"
             android:padding="12dp"
             android:textColor="#555"
-            android:textStyle="bold"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/btnEliminar"
@@ -105,9 +115,10 @@
             android:text="ELIMINAR"
             android:backgroundTint="#E8FACE"
             android:padding="12dp"
-            android:textColor="#555"
-            android:textStyle="bold"/>
+            android:textColor="#555" />
     </LinearLayout>
 </LinearLayout>
+
+
 
 
